@@ -13,3 +13,33 @@ for (i in 1:3) {
   print(mtcars$mpg[i])
 }
 ```
+
+## Task 2:
+
+```{r}
+count_above <- function(num_vec , cut_off) { #this is defining the function
+  count <- 0 #this is the starting of the count value
+  for (i in 1:length(num_vec)) { #this is where we state the for loop 
+    if (num_vec[i] > cut_off) { #this is where we tell that if the num_vec is greater return how many values are indeed greater
+      count <- count + 1 #this is where the it counts the number of ones greater
+    }
+  }
+  return(count) #This returns the count value
+}
+
+count_above(1:31, 15) #this is where we assign num_vec and the cut off values
+```
+
+```{r}
+count_above <- function(num_vec , cut_off) {
+  count <- 0
+  for (i in 1:length(num_vec)) {
+    if (num_vec[i] > cut_off) {
+      count <- count + 1
+    }
+  }
+  return(count)
+}
+
+count_above(iris$Sepal.Length, 6)
+```
