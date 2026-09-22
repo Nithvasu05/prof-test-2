@@ -61,3 +61,15 @@ count_above(mtcars$disp, 150)
 ## Task 3
 
 Masking a function happens when two loaded packages have a function with the same name and the one loaded most recently takes the priority over the earlier one. R warns you about this when you load the package.
+
+## Task 4:
+
+```{r}
+iris$Sepal.Length[1]
+```
+
+This returns the Sepal Length value of the first flower in the data set iris.
+
+```{r}
+iris[1,1]
+```
