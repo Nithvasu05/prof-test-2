@@ -43,3 +43,21 @@ count_above <- function(num_vec , cut_off) {
 
 count_above(iris$Sepal.Length, 6)
 ```
+
+```{r}
+count_above <- function(num_vec, cut_off) {
+  count <- 0
+  for (i in 1:length(num_vec)) {
+    if (num_vec[i] >= cut_off) {
+      count <- count + 1
+    }
+  }
+  return(count)
+}
+
+count_above(mtcars$disp, 150) 
+```
+
+## Task 3
+
+Masking a function happens when two loaded packages have a function with the same name and the one loaded most recently takes the priority over the earlier one. R warns you about this when you load the package.
